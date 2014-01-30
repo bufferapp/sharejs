@@ -1,0 +1,22 @@
+{
+  "name": "sharejs",
+  "version": "0.0.1",
+  "description": "Trigger a Buffer Share Popup from any Dialog",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bufferapp/sharejs.git"
+  },
+  "author": "Sunil Sadasivan",
+  "license": "MIT-LICENSE",
+  "bugs": {
+    "url": "https://github.com/bufferapp/sharejs/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.2"
+  }
+}
