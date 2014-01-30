@@ -56,7 +56,7 @@ var BufferShare = {
     var retweeted_user_display_name = widget.getAttribute('data-retweeted-user-display-name');
 
     url = url ? '&url=' + url : ''; 
-    text = text ? '&text=' + text : ''; 
+    text = text ? '&text=' + encodeURIComponent(text) : ''; 
     via = via ? '&via=' + via : ''; 
     picture = picture ? '&picture=' + encodeURIComponent(picture) : ''; 
     preferred_login = preferred_login ? '&preferred_login=' + preferred_login : '';  
