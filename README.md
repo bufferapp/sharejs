@@ -9,7 +9,7 @@ Share.js is a super minimal and easy plug in to make any DOM element trigger a B
 ##How to use Share.js
 1. Include this script in your header
     ```
-<script src='https://d389zggrogs7qo.cloudfront.net/js/sharejs/0.0.1/share.min.js'></script>
+<script src='https://d389zggrogs7qo.cloudfront.net/js/sharejs/0.0.2/share.min.js'></script>
     ```
 2. Add an anchor tag with class 'buffer-share' and parameters
 
