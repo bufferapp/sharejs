@@ -50,15 +50,23 @@ var BufferShare = {
     var preferred_login = widget.getAttribute('data-preferred-login');
     var partner_source = widget.getAttribute('data-partner-source');
     var partner_placement = widget.getAttribute('data-partner-placement');
+    var retweeted_tweet_id = widget.getAttribute('data-retweeted-tweet-id');
+    var retweeted_user_id = widget.getAttribute('data-retweeted-user-id');
+    var retweeted_user_name = widget.getAttribute('data-retweeted-user-name');
+    var retweeted_user_display_name = widget.getAttribute('data-retweeted-user-display-name');
 
     url = url ? '&url=' + url : ''; 
-    text = text ? '&text=' + text : ''; 
+    text = text ? '&text=' + encodeURIComponent(text) : ''; 
     via = via ? '&via=' + via : ''; 
     picture = picture ? '&picture=' + encodeURIComponent(picture) : ''; 
     preferred_login = preferred_login ? '&preferred_login=' + preferred_login : '';  
     partner_source = partner_source ? '&partner_source=' + partner_source : ''; 
     partner_placement = partner_placement ? '&partner_placement=' + partner_placement : '';  
-    return 'http://bufferapp.com/bookmarklet?client_assistance=1&signup_client=sharejs'+url+text+via+picture+preferred_login+partner_source+partner_placement;
+    retweeted_tweet_id = retweeted_tweet_id ? '&retweeted_tweet_id=' + retweeted_tweet_id : '';
+    retweeted_user_id = retweeted_user_id ? '&retweeted_user_id=' + retweeted_user_id : '';
+    retweeted_user_name = retweeted_user_name ? '&retweeted_user_name=' + retweeted_user_name : '';
+    retweeted_user_display_name = retweeted_user_display_name ? '&retweeted_user_display_name=' + retweeted_user_display_name : '';
+    return 'http://bufferapp.com/bookmarklet?client_assistance=1&signup_client=sharejs'+url+text+via+picture+preferred_login+partner_source+partner_placement+retweeted_tweet_id+retweeted_user_id+retweeted_user_name+retweeted_user_display_name;
 
   },
 
