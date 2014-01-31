@@ -4,7 +4,7 @@ Share.js (0.0.1)
 Trigger the Buffer Share Popup from any specified DOM element
 
 
-Share.js is a super minimal and easy plug in to make any DOM element trigger a Buffer share.  It loads asynchronously to your page and doesn't add any overhead. It's still early in development, so please be sure to send any issues over to Sunil <sunil@bufferapp.com>. 
+Share.js is a super minimal and easy plug in to make any DOM element trigger a Buffer share.  It loads asynchronously to your page and doesn't add any overhead. Share.JS is still early in development, so please be sure to send any issues over to Sunil <sunil@bufferapp.com>. 
 
 ##How to use Share.js
 1. Include this script in your header
@@ -33,6 +33,14 @@ Share.js is a super minimal and easy plug in to make any DOM element trigger a B
 - **data-via**: Via (twitter screen_name)
 - **data-partner-source**: Partner name.  
 - **data-partner-placement**: Partner specified identifier (ie. mini)
+
+####Native Retweets
+Share.js supports creating Native Retweets.  You'll need to supply four params if you'd like to use this. 
+- **data-retweeted-tweet-id**: Numeric Twitter ID of the status.  You can find this on the twitter url of a status
+- **data-retweeted-user-id**: The twitter user id who created the status
+- **data-retweeted-user-name**: The user screen name of the twitter user who created the status
+- **data-retweeted-user-display-name**: The display name of the twitter user who created this status
+
 
 ##Creating Buffer Share DOM Elements with Javascript
 If a buffer-share element is created via javascript after window.onload is called, then be sure to call call BufferShare.reload() afterwards. 
