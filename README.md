@@ -1,4 +1,4 @@
-Share.js (0.0.1)
+Share.js (0.0.2)
 =======
 
 Trigger the Buffer Share Popup from any specified DOM element
