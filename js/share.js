@@ -106,18 +106,23 @@ var BufferShare = {
   init: function()
   {
     document.addEventListener('click', function(event) {
+      event = event || window.event;
       var node = event.target;
-      if (node.getAttribute('data-buffer-share') !== "false") {
-        var src = BufferShare.getAddUrl(node);
-        if (BufferShare.tpc_disabled) {
-          window.open(src, null, "height=600,width=850");
-        }
-        else {
-          BufferShare.createBufferIframe(src);
-        }
-        return false;  
+      if (!node) return;
+
+      var bufferShareAttr = node.getAttribute('data-buffer-share');
+      if (typeof bufferShareAttr !== 'string' || bufferShareAttr == 'false') return;
+
+      // data-buffer-share is defined and not 'false'
+      var src = BufferShare.getAddUrl(node);
+      if (BufferShare.tpc_disabled) {
+        window.open(src, null, "height=600,width=850");
       }
-    })
+      else {
+        BufferShare.createBufferIframe(src);
+      }
+      return false;
+    }, false)
   },
 
   closeBufferIframe: function() 
