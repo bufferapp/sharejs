@@ -103,15 +103,13 @@ var BufferShare = {
     return iframe;
   },
 
-  reload: function()
+  init: function()
   {
-    var widgets = document.getElementsByClassName('buffer-share');
-    for (var i = 0; i < widgets.length; i++) {
-      var widget = widgets[i];
-      widget.onclick = function() {
-        var src = BufferShare.getAddUrl(this);
-
-        if(BufferShare.tpc_disabled) {
+    document.addEventListener('click', function(event) {
+      var node = event.target;
+      if (node.getAttribute('data-buffer-share') !== "false") {
+        var src = BufferShare.getAddUrl(node);
+        if (BufferShare.tpc_disabled) {
           window.open(src, null, "height=600,width=850");
         }
         else {
@@ -119,7 +117,7 @@ var BufferShare = {
         }
         return false;  
       }
-    }
+    })
   },
 
   closeBufferIframe: function() 
@@ -162,6 +160,5 @@ var BufferShare = {
   }
 }
 
-BufferShare.reload(); 
-BufferShare.addLoadEvent(BufferShare.reload);
+BufferShare.init();
 BufferShare.addLoadEvent(BufferShare.TPCDisabledCheck);
