@@ -16,7 +16,7 @@ Share.js is a super minimal and easy plug in to make any DOM element trigger a B
     ###Example:
 
     ```
-<a  data-buffer-share
+    <a data-buffer-share
     data-url='http://blog.bufferapp.com' 
     data-text="The Buffer Blog!" 
     data-preferred-login="twitter" 
