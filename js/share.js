@@ -37,8 +37,9 @@ var BufferShare = {
     return document.title;
   },
   getText: function(text) {
-    if (!text) text = BufferShare.getMetaContentFromProperty('og:title');
-    if (!text) text = BufferShare.getTitle();
+    text = text
+      || BufferShare.getMetaContentFromProperty('og:title')
+      || BufferShare.getTitle();
     return encodeURIComponent(text); 
   },
   getAddUrl: function(widget) {
