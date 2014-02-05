@@ -65,7 +65,7 @@ var BufferShare = {
     var attr, dataAttr, value;
     for (var i = attributes.length - 1; i >= 0; i--) {
       attr = attributes[i];
-      dataAttr = 'data-' + attr.replace(/_/, '-');
+      dataAttr = 'data-' + attr.replace(/_/g, '-');
       if (value = widget.getAttribute(dataAttr)) {
         query.push(attr + '=' + encodeURIComponent(value));
       }
