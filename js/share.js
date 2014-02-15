@@ -111,6 +111,14 @@ var BufferShare = {
       if (!node) return;
 
       var bufferShareAttr = node.getAttribute('data-buffer-share');
+
+      // backwards compatibility for version 0.0.2
+      // don't take the class `buffer-share` into consideration
+      // if `data-buffer-share` is defined (even if it's false)
+      if (typeof bufferShareAttr !== 'string' && /(^| )buffer-share( |$)/.test(node.className)) {
+        bufferShareAttr = 'true';
+      }
+
       if (typeof bufferShareAttr !== 'string' || bufferShareAttr == 'false') return;
 
       // data-buffer-share is defined and not 'false'
