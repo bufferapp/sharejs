@@ -107,7 +107,7 @@ var BufferShare = {
   {
     document.addEventListener('click', function(event) {
       event = event || window.event;
-      var node = event.target;
+      var node = event.target || event.srcElement;
       if (!node) return;
 
       var bufferShareAttr = node.getAttribute('data-buffer-share');
