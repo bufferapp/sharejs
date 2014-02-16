@@ -11,12 +11,12 @@ Share.js is a super minimal and easy plug in to make any DOM element trigger a B
     ```
 <script src='https://d389zggrogs7qo.cloudfront.net/js/sharejs/0.0.2/share.min.js'></script>
     ```
-2. Add an anchor tag with class 'buffer-share' and parameters
+2. Add an anchor tag with attribute `data-buffer-share` and parameters
 
     ###Example:
 
     ```
-<a class='buffer-share' 
+    <a data-buffer-share
     data-url='http://blog.bufferapp.com' 
     data-text="The Buffer Blog!" 
     data-preferred-login="twitter" 
@@ -43,7 +43,7 @@ Share.js supports creating Native Retweets.  You'll need to supply four params i
 
 
 ##Creating Buffer Share DOM Elements with Javascript
-If a buffer-share element is created via javascript after window.onload is called, then be sure to call call BufferShare.reload() afterwards. 
+No worries ;-), Buffer will be automatically attached to elements created with javascript after window.onload is called.
 
 #Development
 Buffer Share.js is open source.  While maintained by Buffer, we welcome any improvements you have!  Here's how you can get started contributing. 
