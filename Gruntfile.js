@@ -4,7 +4,7 @@ module.exports=function(grunt){
   grunt.initConfig({
     pkg:{
       name:'sharejs',
-      version:'0.0.2'
+      version:'0.0.3'
     },
     uglify:{
       sharejs:{
