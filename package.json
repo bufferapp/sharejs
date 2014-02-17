@@ -1,6 +1,6 @@
 {
   "name": "sharejs",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Trigger a Buffer Share Popup from any Dialog",
   "main": "Gruntfile.js",
   "scripts": {
